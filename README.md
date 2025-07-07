@@ -87,6 +87,26 @@ ns.listDomains().then(res=>{
 })
 ```
 
+## renewDomain(domain,years=1,options={}) `Promise`
+```
+ns.renewDomain('gamingmaster.xyz',1).then(res=>{
+    console.log(res)
+}).catch(err=>{
+    console.error(err)
+})
+```
+results:
+```
+{
+  code: '300',
+  detail: 'success',
+  message: 'Your domain renewal was successfully processed.',
+  domain: 'gamingmaster.xyz',
+  order_amount: '23.99'
+}
+```
+
+
 ## domainInfo(domain) `Promise`
 gives all details about a specific domain
 ```
@@ -118,11 +138,17 @@ results:
      technical: '25112',
      billing: '25112' } }
 ```
-
+```
+{
+  code: '200',
+  detail: 'Domain is not active, or does not belong to this user'
+}
+```
 
 # Response codes:
 common ones. you might want to check other codes at [https://www.namesilo.com/api_reference.php]
 ```
+108 : Missing parameters for the specified operation
 110 : Invalid API Key
 200 : Domain is not active, or does not belong to this user
 261 : Domain not available to register

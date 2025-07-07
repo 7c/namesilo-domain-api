@@ -1,7 +1,7 @@
+.gitignore
 release.sh
 .idea/
 yarn.lock
 node_modules/
 demo.js
-.gitignore
 package-lock.json
