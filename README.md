@@ -38,8 +38,6 @@ ns.checkRegisterAvailability(["stakemonsters.com","harboroutlets.io","github.com
 returns
 ```
 {
-  request: { operation: 'checkRegisterAvailability', ip: '94.0.202.10' },
-  reply: {
     code: 300,
     detail: 'success',
     available: [
@@ -59,8 +57,8 @@ returns
       }
     ],
     unavailable: [ 'stakemonsters.com', 'github.com' ]
-  }
 }
+
 ```
 
 ## registerDomain(domain,[years=1,options={}]) `Promise`
