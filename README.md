@@ -37,13 +37,30 @@ ns.checkRegisterAvailability(["stakemonsters.com","harboroutlets.io","github.com
 ```
 returns
 ```
-{ code: '300',
-  detail: 'success',
-  available:
-   { domain:
-      [ { price: '32.88', '$t': 'harboroutlets.io' },
-        { price: '6.99', '$t': 'stakemonsters.com' } ] },
-  unavailable: { domain: 'github.com' } }
+{
+  request: { operation: 'checkRegisterAvailability', ip: '94.0.202.10' },
+  reply: {
+    code: 300,
+    detail: 'success',
+    available: [
+      {
+        domain: 'harboroutlets.io',
+        price: 34.99,
+        renew: 47.99,
+        premium: 0,
+        duration: 1
+      },
+      {
+        domain: 'afyx.ooo',
+        price: 24.99,
+        renew: 24.99,
+        premium: 0,
+        duration: 10
+      }
+    ],
+    unavailable: [ 'stakemonsters.com', 'github.com' ]
+  }
+}
 ```
 
 ## registerDomain(domain,[years=1,options={}]) `Promise`
